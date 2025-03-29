@@ -3,8 +3,8 @@ import numpy as np
 from ultralytics import YOLO
 
 def detect_car_parts(image):
-    # model = YOLO("models\carpartdetection_best.pt")
     model = YOLO("models\\best.pt")
+    # model = YOLO("models\carpartdetection_best.pt")
     results = model.predict(image, save=False, show=False)
 
     class_names = ['Bonnet', 'Bumper', 'Dickey', 'Door', 'Fender', 'Light', 'Windshield']
